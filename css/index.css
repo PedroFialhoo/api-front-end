@@ -1,81 +1,94 @@
 main{
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
     height: 100vh;
-    background-image: url(../assets/images/background.jpg);
-    background-position: center;  
 }
 
-#shadow{
-    background-color: #000a1dc9;    
-    height: 100vh;
-    width: 100vw;    
+.side{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 70vh;
-    border-radius: 20px;
-    background-color: #d6e3ff94;
-    width: 50vw;
-    padding-bottom: 20px;
+    flex-flow: column wrap;
+    gap: 20px;
 }
 
 #logo{
-    width: 300px;
-    margin: -30px 0 20px 5px;
+    width: 250px;
 }
 
-#options{
+#select-op{
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+#loginForm{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
     flex-direction: column;
-    gap: 30px;
+    width: 60%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+input, #loginBtn{
+    border: 1px solid #37415150;
+    border-radius: 40px;
+}
+
+input{
+    width: 90%;
+    height: 50px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 50px; 
+    background-color: #ececec;
+}
+
+#loginBtn{
+    width: 25%;
+    height: 50px;
+    background-color: #FFD24D;
 }
 
 .option{
-    border: 1px solid rgba(0, 0, 0);
-    border-radius: 20px;
-    width: 228px;
-    height: 70px;
-    font-size:x-large;
+    border: none;
+    font-size: large;
+    border-radius: 25px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #374151;
 }
 
-#aluno{
-    background-color: #AEC6FF;
+.aluno{
+    background-color: #aec6ff;
 }
 
-#professor{
+.professor{
     background-color: #7998D6;
 }
 
-#administrador{
+.admin{
     background-color: #4C6AA6;
 }
 
-#aluno:hover,
-#professor:hover,
-#administrador:hover
-{
-    color: #000000;
-    background-color: #FFF5B0;
+.option.select {
+    background-color: #ececec !important;
+    color: black !important;
+    border: 2px solid #374151 !important;
 }
 
-@media (max-width: 480px){
-    .box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        min-height: 70vh;
-        border-radius: 20px;
-        background-color: #d6e3ff94;
-        width: 90vw;
-        padding-bottom: 20px;
-    }
+.option:hover{
+    background-color: #D6E3FF;
+    color: black;
+}
+
+#loginBtn:hover{
+    background-color: #D9940F;
+}
+
+input:hover{
+    background-color: #d6d6d6;
 }
