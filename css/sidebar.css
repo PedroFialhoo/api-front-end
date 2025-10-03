@@ -1,6 +1,6 @@
 .layout {
   display: grid;
-  grid-template-columns: 180px 1fr; 
+  grid-template-columns: 190px 1fr; 
   min-height: 100vh; 
 }
 
@@ -16,16 +16,16 @@
     left: 0;
     top: 0;
     overflow: hidden;
-    transition: width 0.3s;
+    transition: width 0.5s;
 }
 
 .sidebar:hover{
-    width: 180px;
+    width: 182px;
 }
 
 #logo-side-bar{
     width: 70px;
-    transition: 0.3s
+    transition: 0.5s;
 }
 
 .sidebar ul {
@@ -54,14 +54,14 @@
   margin-right: 15px;
   min-width: 20px;
   text-align: center;
-  transition: 0.3s
+  transition: 0.5s;
 }
 
 /* Esconde o texto por padrão */
 .side-op span {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.5s;
 }
 
 /* Ao hover da sidebar, mostra os textos */
@@ -82,3 +82,17 @@
 li:hover span, li:hover i{
     color: #FFD24D;
 }
+
+/* Destaque para o item ativo */
+.side-li.active {
+    background-color: #FFD24D;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.side-li.active span, .side-li.active i{
+    color: #365697;
+}
+
