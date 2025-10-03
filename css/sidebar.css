@@ -91,6 +91,9 @@ li:hover span, li:hover i{
     margin: 0 auto;
 }
 
+.sidebar:hover .side-li.active {
+    width: 99%;
+}
 
 .side-li.active span, .side-li.active i{
     color: #365697;
